@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on mykaneki&#39;s blog</title>
+    <link>https://mykaneki.github.io/</link>
+    <description>Recent content in Documentation on mykaneki&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Jan 2023 17:49:09 +0800</lastBuildDate><atom:link href="https://mykaneki.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Another Post</title>
+      <link>https://mykaneki.github.io/series/another-post/</link>
+      <pubDate>Tue, 03 Jan 2023 17:49:09 +0800</pubDate>
+      
+      <guid>https://mykaneki.github.io/series/another-post/</guid>
+      <description>When life gives you lemons, make lemonade. hello&gt; hello # world&gt; world # Warning! This action is destructive! Don&amp;rsquo;t forget to follow me on Twitter. \(f(a,b,c) = (a^2+b^2+c^2)^3\)</description>
+      
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>https://mykaneki.github.io/posts/</link>
+      <pubDate>Tue, 03 Jan 2023 17:48:29 +0800</pubDate>
+      
+      <guid>https://mykaneki.github.io/posts/</guid>
+      <description>1&gt; 1 # 1
+2&gt; 2 # 2
+3&gt; 3 # 3</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/posts/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>https://mykaneki.github.io/series/first-post/</link>
+      <pubDate>Tue, 03 Jan 2023 17:48:29 +0800</pubDate>
+      
+      <guid>https://mykaneki.github.io/series/first-post/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Series</title>
+      <link>https://mykaneki.github.io/series/series/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mykaneki.github.io/series/series/</guid>
+      <description>Blowfish provides a feature to group a set of articles together under a &amp;ldquo;series&amp;rdquo;. Placing an article under a series will display the rest of the series articles in each single page and provide a quick way to navigate amongst them.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
