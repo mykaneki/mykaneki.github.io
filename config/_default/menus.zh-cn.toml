@@ -20,15 +20,15 @@
  pageRef = "series"
  weight = 20
 
-# [[main]]
-#  name = "分类"
-#  pageRef = "categories"
-#  weight = 20
-
 [[main]]
- name = "标签"
- pageRef = "tags"
+ name = "文档"
+ pageRef = "docs"
  weight = 30
+
+# [[main]]
+#  name = "标签"
+#  pageRef = "tags"
+#  weight = 40
 
 
 # -- Footer Menu --

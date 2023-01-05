@@ -6,7 +6,7 @@ theme = "blowfish"
 baseURL = "https://mykaneki.github.io/"
 defaultContentLanguage = "zh-cn"
 
-# pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
+pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
 paginate = 20
@@ -25,6 +25,7 @@ googleAnalytics = "G-5MM4NB6CC9"
   category = "categories"
   author = "authors"
   series = "series"
+  docs="docs"
 
 [sitemap]
   changefreq = 'always'

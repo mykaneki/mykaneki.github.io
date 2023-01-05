@@ -12,7 +12,7 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
-mainSections = ["docs"]
+mainSections = ["posts"]
 # robots = ""
 
 disableImageOptimization = true
@@ -58,7 +58,7 @@ defaultBackgroundImage = "/img/魏无羡和蓝忘机.jpg"
   showHeadingAnchors = true
   showPagination = true
   invertPagination = true
-  showReadingTime = true
+  showReadingTime = false
   showTableOfContents = true
   showTaxonomies = true 
   showAuthorsBadges = true 
@@ -115,6 +115,7 @@ defaultBackgroundImage = "/img/魏无羡和蓝忘机.jpg"
   messagingSenderId= "615146370767"
   appId= "1:615146370767:web:ffa28dccc2b7017e77a9ba"
   measurementId= "G-5MM4NB6CC9"
+
 [fathomAnalytics]
   # site = "ABC12345"
   # domain = "llama.yoursite.com"
