@@ -1,2 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>操作系统 on mykaneki's blog</title><link>https://mykaneki.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link><description>Recent content in 操作系统 on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>细节或技巧</title><link>https://mykaneki.github.io/posts/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</link><pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</guid><description>数组越界问题> 数组越界问题 # int main(int argc, char* argv[]){ int i = 0; int arr[3] = {0}; for(; i&amp;lt;=3; i++){ arr[i] = 0; printf(&amp;#34;hello world\n&amp;#34;); } return 0; } 疑问：这段代码的运行结果理论上是无限打印，实际上VS编译器中只打印了四次。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>操作系统 on mykaneki's blog</title><link>https://mykaneki.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link><description>Recent content in 操作系统 on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 07 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>操作系统习题</title><link>https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%A0%E9%A2%98/</link><pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%A0%E9%A2%98/</guid><description>第一章 习题> 第一章 习题 # 1. 判断以下命题是否正确，并说明理由。> 1. 判断以下命题是否正确，并说明理由。 # 设计操作系统的主要目标是什么？
+方便性：使计算机更易于用户使用。 有效性：以有效的方式管理计算机系统的资源，合理地组织计算机的工作流程， 以防止对计算机资源的不当或错误使用。这是操作系统可用的关键因素。 可扩展性：为用户的的开发搭建一个平台，允许修改、并引进新的功能。 操作系统为计算机上所有软件的性能提高提供了平台，另外，操作系统提供了一系列功能用以支持用户程序的运行。 操作系统的基本功能是什么?
+操作系统是用户和计算机硬件之间的接口。 操作系统是计算机系统资源的管理者。 操作系统用作扩充机器，使得裸机功能更强、更方便使用。 多道批处理系统形成和发展的主要动力是什么？
+计算机体系的不断发展，需要不断提高计算机资源的利用率和系统吞吐量的需要。
+推动分时操作系统形成和发展的主要动力是什么？
+为了满足用户对人机交互的需求，出现了分时系统。
+操作系统的结构大致可分为哪几类？UNIX 的结构有什么特点？
+三类：整体、分层、微内核
+UNIX是分层结构
+优点 增加了系统的可读性和可适应性，简化了系统的设计和实现。 易于调试、修改、扩充、维护和保证正确性。 缺点 操作系统的效率不高。 层的定义较为困难。 第二章 习题> 第二章 习题 # 1.</description></item><item><title>操作系统学习笔记</title><link>https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/</link><pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/</guid><description>1. 绪论> 1. 绪论 # 1.1 操作系统概述> 1.1 操作系统概述 # 1.1.1 操作系统的定义> 1.1.1 操作系统的定义 # Operating System 是指控制和管理整个计算机系统的硬件与软件资源，合理地组织和调度计算机的工作和资源的分配，进而为用户和其他软件提供方便接口与环境的程序集合。
+操作系统是计算机系统中最基本的系统软件。
+1.1.2 操作系统的功能> 1.1.2 操作系统的功能 # 操作系统是用户和计算机硬件之间的接口。
+命令接口
+联机命令接口（交互式命令接口）
+适用于分时和实时操作系统
+脱机命令接口（批处理命令接口）
+适用于批处理系统</description></item><item><title>细节或技巧</title><link>https://mykaneki.github.io/docs/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</link><pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</guid><description>数组越界问题> 数组越界问题 # int main(int argc, char* argv[]){ int i = 0; int arr[3] = {0}; for(; i&amp;lt;=3; i++){ arr[i] = 0; printf(&amp;#34;hello world\n&amp;#34;); } return 0; } 疑问：这段代码的运行结果理论上是无限打印，实际上VS编译器中只打印了四次。
 在 C 语言中，只要不是访问受限的内存，所有的内存空间都是可以自由访问的。根据我们前面讲的数组寻址公式，a[3]也会被定位到某块不属于数组的内存地址上，而这个地址正好是存储变量 i 的内存地址，那么 a[3]=0 就相当于 i=0，所以就会导致代码无限循环。</description></item></channel></rss>

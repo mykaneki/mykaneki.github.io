@@ -1,6 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on mykaneki's blog</title><link>https://mykaneki.github.io/tags/docker/</link><description>Recent content in docker on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>重装电脑</title><link>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</guid><description>git安装与配置> git安装与配置 # git下载
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>‘docker’ on mykaneki's blog</title><link>https://mykaneki.github.io/tags/docker/</link><description>Recent content in ‘docker’ on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>docker命令</title><link>https://mykaneki.github.io/docs/docker%E7%9A%84%E4%BD%BF%E7%94%A8/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/docker%E7%9A%84%E4%BD%BF%E7%94%A8/</guid><description>docker命令> docker命令 # 查看镜像
+docker image ls
+删除所有镜像
+docker rmi $(docker images -q)
+查看运行中的容器
+docker ps
+宿主机和容器间复制文件
+从主机复制到容器sudo docker cp host_path containerID:container_path
+从容器复制到主机sudo docker cp containerID:container_path host_path
+停止并删除容器
+docker stop &amp;lt;container id|name=``&amp;quot;&amp;quot;``&amp;gt;&amp;lt;/container&amp;gt;</description></item><item><title>重装电脑</title><link>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</guid><description>git安装与配置> git安装与配置 # git下载
 配置账号信息
 # git config --global user.name &amp;#34;kaneki_my&amp;#34; # git config --global user.email &amp;#34;2795188612@qq.com&amp;#34; # ssh-keygen -t rsa -C &amp;#34;2795188612@qq.com&amp;#34; 到git仓库，添加秘钥
 查看密钥存放路径
 ​ 将.pub 的内容复制到github上
-GitHub上的git文档 git-tips/README.md at master · kwshare/git-tips (github.</description></item></channel></rss>
+GitHub上的git文档 git-tips/README.md at master · kwshare/git-tips (github.</description></item><item><title>Mysql+docker</title><link>https://mykaneki.github.io/posts/mysql+docker/</link><pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/mysql+docker/</guid><description> 版本8.0.19
+安装命令
+docker run -p 3306:3306 --name mysql \-v /mydata/mysql/log:/var/log/mysql \-v /mydata/mysql/conf/my.cnf:/etc/mysql/my.cnf \-v /mydata/mysql/data:/var/lib/mysql \-e MYSQL_ROOT_PASSWORD=root \-d mysql:8.0.19 命令
+docker exec -it mysqlone /bin/bash</description></item></channel></rss>

@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kali on mykaneki's blog</title><link>https://mykaneki.github.io/tags/kali/</link><description>Recent content in kali on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/kali/index.xml" rel="self" type="application/rss+xml"/><item><title>重装电脑</title><link>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</guid><description>git安装与配置> git安装与配置 # git下载
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kali on mykaneki's blog</title><link>https://mykaneki.github.io/tags/kali/</link><description>Recent content in kali on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/kali/index.xml" rel="self" type="application/rss+xml"/><item><title>Kali Linux 环境配置</title><link>https://mykaneki.github.io/posts/kali-linux-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/kali-linux-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid><description>kali linux 环境配置> kali linux 环境配置 # 起源于一次hadoop的安装和环境配置
+因为环境调了很久，具体的细节记不清了，
+一直在几个文件中反复横跳
+vim ~/.local_profile
+vim /etc/profile
+vim ~/.zshrc
+vim ~/.bashrc
+vim /etc/profile.d/my_env.sh
+期间出过一些异常情况：
+重启控制台环境就失效
+xshell下使用普通用户kali运行hadoop可以识别命令，但是同一时间在虚拟机中无法识别命令；
+普通用户可以识别但是root不能识别，或者root能识别但是普通用户不能识别
+重启之后普通用户的JAVA_HOME不见了，但是root的还在
+source了之后控制台发生变化
+猜测source /etc/profile和source ~/.zshrc 可以改变当前的环境，因此会出现source ~/.</description></item><item><title>重装电脑</title><link>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</guid><description>git安装与配置> git安装与配置 # git下载
 配置账号信息
 # git config --global user.name &amp;#34;kaneki_my&amp;#34; # git config --global user.email &amp;#34;2795188612@qq.com&amp;#34; # ssh-keygen -t rsa -C &amp;#34;2795188612@qq.com&amp;#34; 到git仓库，添加秘钥
 查看密钥存放路径

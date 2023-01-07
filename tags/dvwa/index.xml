@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DVWA on mykaneki's blog</title><link>https://mykaneki.github.io/tags/dvwa/</link><description>Recent content in DVWA on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/dvwa/index.xml" rel="self" type="application/rss+xml"/><item><title>DVWA靶场</title><link>https://mykaneki.github.io/docs/dvwa/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/dvwa/</guid><description>环境搭建> 环境搭建 # kali + docker
+docker run --rm -it -p 80:80 vulnerables/web-dvwa 打开网页 http://127.0.0.1/index.php
+点击Create / Reset database
+Username：admin Password：password
+安装及配置BurpSuite> 安装及配置BurpSuite # 下载所需要的文件
+Releases · h3110w0r1d-y/BurpLoaderKeygen (github.com)
+​ Burp Suite Release Notes (portswigger.</description></item></channel></rss>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>大数据 on mykaneki's blog</title><link>https://mykaneki.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</link><description>Recent content in 大数据 on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 07 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/index.xml" rel="self" type="application/rss+xml"/><item><title>大数据基本配置和使用</title><link>https://mykaneki.github.io/docs/%E5%A4%A7%E6%95%B0%E6%8D%AE/</link><pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E5%A4%A7%E6%95%B0%E6%8D%AE/</guid><description>集群配置> 集群配置 # kali+docker
+选择一个目录存放git clone的目录，克隆项目
+项目克隆前需要换源以及git ssh配置
+cd ~/clonprj
+git clone git@github.com:big-data-europe/docker-hadoop.git
+cat docker-compose.yml 查看资源清单
+version: &amp;#34;3&amp;#34; services: namenode: image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8 container_name: namenode restart: always ports: - 9870:9870 - 9000:9000 volumes: - hadoop_namenode:/hadoop/dfs/name environment: - CLUSTER_NAME=test env_file: - .</description></item></channel></rss>

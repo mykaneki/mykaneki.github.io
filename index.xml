@@ -1,11 +1,128 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on mykaneki's blog</title><link>https://mykaneki.github.io/</link><description>Recent content in Documentation on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 03 Jan 2023 17:48:29 +0800</lastBuildDate><atom:link href="https://mykaneki.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>计网英文复习</title><link>https://mykaneki.github.io/posts/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/</link><pubDate>Tue, 03 Jan 2023 17:48:29 +0800</pubDate><guid>https://mykaneki.github.io/posts/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/</guid><description>chapter 1 Computer Networks and the Internet> chapter 1 Computer Networks and the Internet # chapter 1 Computer Networks and the Internet
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on mykaneki's blog</title><link>https://mykaneki.github.io/</link><description>Recent content in Documentation on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>docker命令</title><link>https://mykaneki.github.io/docs/docker%E7%9A%84%E4%BD%BF%E7%94%A8/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/docker%E7%9A%84%E4%BD%BF%E7%94%A8/</guid><description>docker命令> docker命令 # 查看镜像
+docker image ls
+删除所有镜像
+docker rmi $(docker images -q)
+查看运行中的容器
+docker ps
+宿主机和容器间复制文件
+从主机复制到容器sudo docker cp host_path containerID:container_path
+从容器复制到主机sudo docker cp containerID:container_path host_path
+停止并删除容器
+docker stop &amp;lt;container id|name=``&amp;quot;&amp;quot;``&amp;gt;&amp;lt;/container&amp;gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/docker%E7%9A%84%E4%BD%BF%E7%94%A8/featured.jpg"/></item><item><title>Fflush可移植性不高，用什么来代替？</title><link>https://mykaneki.github.io/posts/fflush%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7%E4%B8%8D%E9%AB%98%E7%94%A8%E4%BB%80%E4%B9%88%E6%9D%A5%E4%BB%A3%E6%9B%BF/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/fflush%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7%E4%B8%8D%E9%AB%98%E7%94%A8%E4%BB%80%E4%B9%88%E6%9D%A5%E4%BB%A3%E6%9B%BF/</guid><description>//方法一 scanf(&amp;#34;%*[^\n]&amp;#34;); //清除回车键以前的所有字符 scanf(&amp;#34;%*c&amp;#34;); //清除任意一个字符，这里是回车 //方法二 char c; while ((c = getchar()) != &amp;#39;\n&amp;#39; &amp;amp;&amp;amp; c != EOF);</description></item><item><title>Kali Linux 环境配置</title><link>https://mykaneki.github.io/posts/kali-linux-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/kali-linux-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid><description>kali linux 环境配置> kali linux 环境配置 # 起源于一次hadoop的安装和环境配置
+因为环境调了很久，具体的细节记不清了，
+一直在几个文件中反复横跳
+vim ~/.local_profile
+vim /etc/profile
+vim ~/.zshrc
+vim ~/.bashrc
+vim /etc/profile.d/my_env.sh
+期间出过一些异常情况：
+重启控制台环境就失效
+xshell下使用普通用户kali运行hadoop可以识别命令，但是同一时间在虚拟机中无法识别命令；
+普通用户可以识别但是root不能识别，或者root能识别但是普通用户不能识别
+重启之后普通用户的JAVA_HOME不见了，但是root的还在
+source了之后控制台发生变化
+猜测source /etc/profile和source ~/.zshrc 可以改变当前的环境，因此会出现source ~/.</description></item><item><title>Linux备份</title><link>https://mykaneki.github.io/posts/linux%E5%A4%87%E4%BB%BD/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/linux%E5%A4%87%E4%BB%BD/</guid><description>使用一个git项目进行备份> 使用一个git项目进行备份 # mkdir gitclone cd gitclone
+git clone git@github.com:Jrebort/Linux-System-BackupTool.git</description></item><item><title>Python重定向输入notreadable</title><link>https://mykaneki.github.io/posts/python%E9%87%8D%E5%AE%9A%E5%90%91%E8%BE%93%E5%85%A5notreadable/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/python%E9%87%8D%E5%AE%9A%E5%90%91%E8%BE%93%E5%85%A5notreadable/</guid><description>两处错误
+用open打开一个文件，此时调用的是w写入模式，下面使用read是没有权限的，得使用w+读写模式 使用write写入一个字符s，但是此时并没有真正的写入，而是还存在与内存中。此时执行read读取的为空字符。需要执行a.close()以后，再使用a=open(“D://2.txt”) a.read()才能够读取到数据。</description></item><item><title>Python字符串转为元组再添加进列表</title><link>https://mykaneki.github.io/posts/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%85%83%E7%BB%84%E5%86%8D%E6%B7%BB%E5%8A%A0%E8%BF%9B%E5%88%97%E8%A1%A8/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%85%83%E7%BB%84%E5%86%8D%E6%B7%BB%E5%8A%A0%E8%BF%9B%E5%88%97%E8%A1%A8/</guid><description>while True: # 获取数据 line = input(&amp;#34;请输入学生的姓名，性别，年龄，语文成绩，数学成绩，英语成绩（输入-1时退出）：&amp;#34;) if line == &amp;#39;-1&amp;#39;: print(&amp;#34;已退出&amp;#34;) break # rows.append(tuple(line)) line = tuple(line.split(&amp;#39;,&amp;#39;)) rows.append(line) rows.append(tuple(line)) 如果直接如此，则一个字符为一个元素
+[(&amp;lsquo;a&amp;rsquo;, &amp;rsquo;m&amp;rsquo;, &amp;lsquo;y&amp;rsquo;, &amp;lsquo;,&amp;rsquo;, &amp;lsquo;w&amp;rsquo;, &amp;rsquo;e&amp;rsquo;, &amp;rsquo;m&amp;rsquo;, &amp;lsquo;a&amp;rsquo;, &amp;rsquo;n&amp;rsquo;, &amp;lsquo;,&amp;rsquo;, &amp;lsquo;1&amp;rsquo;, &amp;lsquo;8&amp;rsquo;, &amp;lsquo;,&amp;rsquo;, &amp;lsquo;8&amp;rsquo;, &amp;lsquo;5&amp;rsquo;, &amp;lsquo;,&amp;rsquo;, &amp;lsquo;8&amp;rsquo;, &amp;lsquo;5&amp;rsquo;, &amp;lsquo;,&amp;rsquo;, &amp;lsquo;8&amp;rsquo;, &amp;lsquo;5&amp;rsquo;)]</description></item><item><title>Rval每次都返回 1</title><link>https://mykaneki.github.io/posts/rval%E6%AF%8F%E6%AC%A1%E9%83%BD%E8%BF%94%E5%9B%9E-1/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/rval%E6%AF%8F%E6%AC%A1%E9%83%BD%E8%BF%94%E5%9B%9E-1/</guid><description>rval = send(rval, buf, strlen(buf) + 1, 0);//error 10038 WSAENOTSOCK //无效套接字上的套接字操作。任何一个把SOCKET句柄当作参数的Winsock函数都会返回这个错误。它表明提供的套接字句柄无效。 magsock才是获得连接的套接字
+rval 改为 msgsock
+而msgsock = accept(sock, (struct sockaddr*)&amp;amp;tcpaddr, (int*)&amp;amp;len);</description></item><item><title>SQL三表联查、分组去重</title><link>https://mykaneki.github.io/posts/sql%E4%B8%89%E8%A1%A8%E8%81%94%E6%9F%A5%E5%88%86%E7%BB%84%E5%8E%BB%E9%87%8D/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/sql%E4%B8%89%E8%A1%A8%E8%81%94%E6%9F%A5%E5%88%86%E7%BB%84%E5%8E%BB%E9%87%8D/</guid><description>表结构
+查询选修了“苏亚步”教师开设课程的所有学生的学号和姓名
+统计每一年龄选修课程的学生人数
+date如何输入数据> date如何输入数据 # 按照格式，以字符串形式输入
+create table students( 学号 int not null primary key, 姓名 varchar(20), 性别 varchar(5), 年龄 int, 所在院系 varchar(50), 班级名 varchar(50), 入学日期 date, ); insert into students values(20009001,&amp;#39;葛文卿&amp;#39;,&amp;#39;女&amp;#39;,22,&amp;#39;国际贸易&amp;#39;,&amp;#39;国贸2班&amp;#39;,&amp;#39;20000829&amp;#39;), (20014019,&amp;#39;郑秀丽&amp;#39;,&amp;#39;女&amp;#39;,21,&amp;#39;会计学&amp;#39;,&amp;#39;会计1班&amp;#39;,&amp;#39;20010902&amp;#39;), (20023001,&amp;#39;刘成铠&amp;#39;,&amp;#39;男&amp;#39;,18,&amp;#39;计算机&amp;#39;,&amp;#39;软件2班&amp;#39;,&amp;#39;20020827&amp;#39;), (20026002 ,&amp;#39;李涛&amp;#39;,&amp;#39;女&amp;#39;,19,&amp;#39;电子学&amp;#39;,&amp;#39;电子1班&amp;#39;,&amp;#39;20020827&amp;#39;), (20023002 ,&amp;#39;沈香娜&amp;#39;,&amp;#39;女&amp;#39;,19,&amp;#39;计算机&amp;#39;,&amp;#39;软件2班&amp;#39;,&amp;#39;20020827&amp;#39;), (20026003 ,&amp;#39;李涛&amp;#39;,&amp;#39;男&amp;#39;,19,&amp;#39;计算机&amp;#39;,&amp;#39;软件1班&amp;#39;,&amp;#39;20020827&amp;#39;), (20023003 ,&amp;#39;肖一竹&amp;#39;,&amp;#39;女&amp;#39;,19,&amp;#39;计算机&amp;#39;,&amp;#39;软件2班&amp;#39;,&amp;#39;20020827&amp;#39;);</description></item><item><title>各个Linux发行版下载软件常使用的命令</title><link>https://mykaneki.github.io/posts/%E5%90%84%E4%B8%AAlinux%E5%8F%91%E8%A1%8C%E7%89%88%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E5%90%84%E4%B8%AAlinux%E5%8F%91%E8%A1%8C%E7%89%88%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/</guid><description>Debian dpkg、apt、apt-get
+centos yum、rpm
+kali apt-get、dpkg
+Ubuntu apt</description></item><item><title>给Chrome浏览器添加应用商店没有的Crx插件报错</title><link>https://mykaneki.github.io/posts/%E7%BB%99chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B7%BB%E5%8A%A0%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E6%B2%A1%E6%9C%89%E7%9A%84crx%E6%8F%92%E4%BB%B6%E6%8A%A5%E9%94%99/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E7%BB%99chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B7%BB%E5%8A%A0%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E6%B2%A1%E6%9C%89%E7%9A%84crx%E6%8F%92%E4%BB%B6%E6%8A%A5%E9%94%99/</guid><description>“该扩展程序未列在 Chrome 网上应用店中，并可能是在您不知情的情况下添加的”</description></item><item><title>如何使用WSAGetLastError</title><link>https://mykaneki.github.io/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8wsagetlasterror/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8wsagetlasterror/</guid><description>printf(&amp;#34;%d&amp;#34;, WSAGetLastError()); 返回值：需要的时候再查</description></item><item><title>添加本地组策略</title><link>https://mykaneki.github.io/posts/%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E7%BB%84%E7%AD%96%E7%95%A5/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E7%BB%84%E7%AD%96%E7%95%A5/</guid><description>pushd &amp;#34;%~dp0&amp;#34; dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &amp;gt;List.txt dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &amp;gt;&amp;gt;List.txt for /f %%i in (&amp;#39;findstr /i . List.txt 2^&amp;gt;nul&amp;#39;) do dism /online /norestart /add-package:&amp;#34;C:\Windows\servicing\Packages\%%i&amp;#34;</description></item><item><title>通过跳板机连接内网服务器</title><link>https://mykaneki.github.io/posts/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link><pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid><description>ProxyJump 通过跳板机连接内网服务器> ProxyJump 通过跳板机连接内网服务器 # 本来使用的是xshell，但是经过一通操作，发现xshell连不上，但是直接命令行可以连，于是直接用powershell来操作了
+ProxyJump> ProxyJump # 需要 OpenSSH 7.3 以上版本才可以使用 ProxyJump, 使用下列命令查看OpenSSH 版本：
+$ ssh -V ProxyJump 命令行使用方法：
+ssh -J [email protected]:port1,[email protected]:port2 可以直接使用上述命令通过跳板机直接登录内网机器，比如：
+ssh username@目标机器IP -p 22 -J username@跳板机IP:22 如果需要通过多个跳板机则以 , 分割：</description></item><item><title>计网英文复习</title><link>https://mykaneki.github.io/docs/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/</link><pubDate>Tue, 03 Jan 2023 17:48:29 +0800</pubDate><guid>https://mykaneki.github.io/docs/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/</guid><description>chapter 1 Computer Networks and the Internet> chapter 1 Computer Networks and the Internet # chapter 1 Computer Networks and the Internet
 interconnects 互相连接
 Intranet 内网
-twisted-pair copper wire 双绞铜线</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/posts/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/featured.jpg"/></item><item><title>重装电脑</title><link>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</guid><description>git安装与配置> git安装与配置 # git下载
+twisted-pair copper wire 双绞铜线</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/featured.jpg"/></item><item><title>如何部署爬虫程序到云服务器上</title><link>https://mykaneki.github.io/posts/%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</link><pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/</guid><description>python后台执行> python后台执行 # nohup python -u script.py &amp;gt; log.out &amp;amp;
+这里，&amp;gt; log.out 表示将控制台输出输出到log.out文件中 -u选项表示每多一条信息就实时输出到log.out中，而不是全部输出完毕再输出 &amp;amp;符号表示在后台执行，运行时可以查看日志或者运行
+检查运行状况> 检查运行状况 # ps -ef |grep python
+查看后台运行的python进程
+查看文件大小> 查看文件大小 # ls -ld</description></item><item><title>Linux文件详情</title><link>https://mykaneki.github.io/posts/linux%E6%96%87%E4%BB%B6%E8%AF%A6%E6%83%85/</link><pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/linux%E6%96%87%E4%BB%B6%E8%AF%A6%E6%83%85/</guid><description>-rw-r----- 1 root shadow 1514 Nov 24 2020 /etc/shadow
+第一列：字母，表示文件类型和权限
+第一个字母代表文件类型（见附录），后面每三个为一组。
+第一组：所有者权限；
+第二组：组用户权限；
+第三组：其他用户组权限；
+第二列：数字
+如果是目录：这个数字表示当前目录下面一级目录的个数
+如果是文件：数字表示硬链接个数（底层存放一份，但是却有多个不同的名字，修改其中一个都会影响到其他的）
+第三列：所有者
+第四列：表示所属的组
+第五列：文件大小
+第六七八列：最后修改文件的日期
+第九列：文件路径
+附录> 附录 # 1. 文件类型> 1. 文件类型 # d：目录文件 -：普通文件 p：管理文件 l：链接文件 b：块设备文件 c：字符设备文件 s：套接字文件 2.</description></item><item><title>DVWA靶场</title><link>https://mykaneki.github.io/docs/dvwa/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/dvwa/</guid><description>环境搭建> 环境搭建 # kali + docker
+docker run --rm -it -p 80:80 vulnerables/web-dvwa 打开网页 http://127.0.0.1/index.php
+点击Create / Reset database
+Username：admin Password：password
+安装及配置BurpSuite> 安装及配置BurpSuite # 下载所需要的文件
+Releases · h3110w0r1d-y/BurpLoaderKeygen (github.com)
+​ Burp Suite Release Notes (portswigger.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/dvwa/featured.jpg"/></item><item><title>重装电脑</title><link>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</guid><description>git安装与配置> git安装与配置 # git下载
 配置账号信息
 # git config --global user.name &amp;#34;kaneki_my&amp;#34; # git config --global user.email &amp;#34;2795188612@qq.com&amp;#34; # ssh-keygen -t rsa -C &amp;#34;2795188612@qq.com&amp;#34; 到git仓库，添加秘钥
 查看密钥存放路径
 ​ 将.pub 的内容复制到github上
-GitHub上的git文档 git-tips/README.md at master · kwshare/git-tips (github.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/featured.jpg"/></item><item><title>细节或技巧</title><link>https://mykaneki.github.io/posts/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</link><pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</guid><description>数组越界问题> 数组越界问题 # int main(int argc, char* argv[]){ int i = 0; int arr[3] = {0}; for(; i&amp;lt;=3; i++){ arr[i] = 0; printf(&amp;#34;hello world\n&amp;#34;); } return 0; } 疑问：这段代码的运行结果理论上是无限打印，实际上VS编译器中只打印了四次。
-在 C 语言中，只要不是访问受限的内存，所有的内存空间都是可以自由访问的。根据我们前面讲的数组寻址公式，a[3]也会被定位到某块不属于数组的内存地址上，而这个地址正好是存储变量 i 的内存地址，那么 a[3]=0 就相当于 i=0，所以就会导致代码无限循环。</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/posts/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/featured.jpg"/></item><item><title>杂记</title><link>https://mykaneki.github.io/posts/%E6%9D%82%E8%AE%B0/</link><pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E6%9D%82%E8%AE%B0/</guid><description>彻底删除idea项目> 彻底删除idea项目 # remove module 手动删除文件夹 删除项目引用 使用Everything搜索找到 项目.contexts.zip和项目.tasks.zip两个文件，将其删除 idea快捷键> idea快捷键 # 批量编辑 ：alt + shift+insert
-方法说明注释：输入/** ,点击“Enter”</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/posts/%E6%9D%82%E8%AE%B0/featured.jpg"/></item></channel></rss>
+GitHub上的git文档 git-tips/README.md at master · kwshare/git-tips (github.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/featured.jpg"/></item><item><title>开启远程桌面</title><link>https://mykaneki.github.io/posts/%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/</link><pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/</guid><description>开启远程桌面> 开启远程桌面 # update
+apt-get update &amp;amp;&amp;amp; apt-get upgrade &amp;amp;&amp;amp; apt-get dist-upgrade
+添加新的管理员
+sudo -i adduser rdpuser password 2y$}KzE2 安装Ubuntu图形界面
+sudo apt install ubuntu-desktop
+安装和配置rdp服务器
+sudo apt install xrdp sudo systemctl status xrdp sudo vim /etc/xrdp/xrdp.</description></item><item><title>操作系统习题</title><link>https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%A0%E9%A2%98/</link><pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%A0%E9%A2%98/</guid><description>第一章 习题> 第一章 习题 # 1. 判断以下命题是否正确，并说明理由。> 1. 判断以下命题是否正确，并说明理由。 # 设计操作系统的主要目标是什么？
+方便性：使计算机更易于用户使用。 有效性：以有效的方式管理计算机系统的资源，合理地组织计算机的工作流程， 以防止对计算机资源的不当或错误使用。这是操作系统可用的关键因素。 可扩展性：为用户的的开发搭建一个平台，允许修改、并引进新的功能。 操作系统为计算机上所有软件的性能提高提供了平台，另外，操作系统提供了一系列功能用以支持用户程序的运行。 操作系统的基本功能是什么?
+操作系统是用户和计算机硬件之间的接口。 操作系统是计算机系统资源的管理者。 操作系统用作扩充机器，使得裸机功能更强、更方便使用。 多道批处理系统形成和发展的主要动力是什么？
+计算机体系的不断发展，需要不断提高计算机资源的利用率和系统吞吐量的需要。
+推动分时操作系统形成和发展的主要动力是什么？
+为了满足用户对人机交互的需求，出现了分时系统。
+操作系统的结构大致可分为哪几类？UNIX 的结构有什么特点？
+三类：整体、分层、微内核
+UNIX是分层结构
+优点 增加了系统的可读性和可适应性，简化了系统的设计和实现。 易于调试、修改、扩充、维护和保证正确性。 缺点 操作系统的效率不高。 层的定义较为困难。 第二章 习题> 第二章 习题 # 1.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%A0%E9%A2%98/featured.jpg"/></item><item><title>操作系统学习笔记</title><link>https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/</link><pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/</guid><description>1. 绪论> 1. 绪论 # 1.1 操作系统概述> 1.1 操作系统概述 # 1.1.1 操作系统的定义> 1.1.1 操作系统的定义 # Operating System 是指控制和管理整个计算机系统的硬件与软件资源，合理地组织和调度计算机的工作和资源的分配，进而为用户和其他软件提供方便接口与环境的程序集合。
+操作系统是计算机系统中最基本的系统软件。
+1.1.2 操作系统的功能> 1.1.2 操作系统的功能 # 操作系统是用户和计算机硬件之间的接口。
+命令接口
+联机命令接口（交互式命令接口）
+适用于分时和实时操作系统
+脱机命令接口（批处理命令接口）
+适用于批处理系统</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/featured.jpg"/></item><item><title>大数据基本配置和使用</title><link>https://mykaneki.github.io/docs/%E5%A4%A7%E6%95%B0%E6%8D%AE/</link><pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E5%A4%A7%E6%95%B0%E6%8D%AE/</guid><description>集群配置> 集群配置 # kali+docker
+选择一个目录存放git clone的目录，克隆项目
+项目克隆前需要换源以及git ssh配置
+cd ~/clonprj
+git clone git@github.com:big-data-europe/docker-hadoop.git
+cat docker-compose.yml 查看资源清单
+version: &amp;#34;3&amp;#34; services: namenode: image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8 container_name: namenode restart: always ports: - 9870:9870 - 9000:9000 volumes: - hadoop_namenode:/hadoop/dfs/name environment: - CLUSTER_NAME=test env_file: - .</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/%E5%A4%A7%E6%95%B0%E6%8D%AE/featured.jpg"/></item><item><title>饿了么项目总结</title><link>https://mykaneki.github.io/posts/%E9%A5%BF%E4%BA%86%E4%B9%88%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</link><pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E9%A5%BF%E4%BA%86%E4%B9%88%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</guid><description>饿了么项目总结> 饿了么项目总结 # jdbc学习
+注册驱动
+告诉java程序即将连接哪个品牌的数据库 使用了资源绑定器绑定属性配置文件bundle.getString(&amp;ldquo;DRIVER&amp;rdquo;); 获取连接
+表示JVM的进程和数据库进程之间的通道打开了，属于进程之间的通信。消耗大，使用完必须关闭 获取数据库对象
+执行SQL
+有两种方法：statement和preparedstatement
+preparedstatement statement 编译一次执行多次，效率更高 编译一次执行一次 解决SQL注入问题 存在SQL注入问题 会在编译阶段做类型的安全检查 大多数情况都用预编译 需要进行SQL语句拼接的时候才用（例如：商城的升序和降序） SQL注入
+sql语句： select * from user where loginName = '&amp;quot;+loginName+&amp;quot;' and loginPwd = '&amp;quot;+loginPwd+&amp;quot;'</description></item><item><title>密码学学习笔记</title><link>https://mykaneki.github.io/docs/%E5%AF%86%E7%A0%81%E5%AD%A6/</link><pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E5%AF%86%E7%A0%81%E5%AD%A6/</guid><description>1. 绪论> 1. 绪论 # 任何需要可信的第三方的计算，都可以舍弃第三方
+1.1 Security Objectives> 1.1 Security Objectives # 保密性 Confidentiality
+信息的非授权泄露
+数据保密性 Data confidentiality
+确保自己的隐私信息不在未授权的情况下透露给他人。
+隐私性 Privacy
+确保自己的隐私能够被自己控制，如：向谁授权，让其获得这些隐私。
+完整性 Integrity
+信息的非授权更改和毁坏
+数据完整性 Data integrity
+确保信息和程序只能以特定和授权的方式进行更改，避免信息的不恰当更改或破坏。</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/%E5%AF%86%E7%A0%81%E5%AD%A6/featured.jpg"/></item><item><title>Mysql+docker</title><link>https://mykaneki.github.io/posts/mysql+docker/</link><pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/mysql+docker/</guid><description> 版本8.0.19
+安装命令
+docker run -p 3306:3306 --name mysql \-v /mydata/mysql/log:/var/log/mysql \-v /mydata/mysql/conf/my.cnf:/etc/mysql/my.cnf \-v /mydata/mysql/data:/var/lib/mysql \-e MYSQL_ROOT_PASSWORD=root \-d mysql:8.0.19 命令
+docker exec -it mysqlone /bin/bash</description></item><item><title>把文件设为stdin后如何读数据</title><link>https://mykaneki.github.io/posts/%E6%8A%8A%E6%96%87%E4%BB%B6%E8%AE%BE%E4%B8%BAstdin%E5%90%8E%E5%A6%82%E4%BD%95%E8%AF%BB%E6%95%B0%E6%8D%AE/</link><pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/%E6%8A%8A%E6%96%87%E4%BB%B6%E8%AE%BE%E4%B8%BAstdin%E5%90%8E%E5%A6%82%E4%BD%95%E8%AF%BB%E6%95%B0%E6%8D%AE/</guid><description>可以借助sys.stdin.readline() sys.stdin.read() sys.stdin.readlines()
+也可以直接用input()实现交互
+坑点：在读的时候必须以只读的方式打开，图一是错误的，图二才能正确读出数据
+事实上，图二之所以能够读出数据，是因为指针偏移量重置为0了，在图一的flush后加上seek(0)即可，如图三
+使用with语句改进：
+import sys import random with open(&amp;#34;in.txt&amp;#34;,&amp;#39;w+&amp;#39;,encoding=&amp;#39;utf8&amp;#39;) as f: sys.stdin = f f.write(&amp;#34;55&amp;#34;) f.flush() f.seek(0) line = sys.stdin.readline() count = 0 while True: print(random.randint(0, int(line))) count += 1 if count == 50: break</description></item><item><title>细节或技巧</title><link>https://mykaneki.github.io/docs/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</link><pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</guid><description>数组越界问题> 数组越界问题 # int main(int argc, char* argv[]){ int i = 0; int arr[3] = {0}; for(; i&amp;lt;=3; i++){ arr[i] = 0; printf(&amp;#34;hello world\n&amp;#34;); } return 0; } 疑问：这段代码的运行结果理论上是无限打印，实际上VS编译器中只打印了四次。
+在 C 语言中，只要不是访问受限的内存，所有的内存空间都是可以自由访问的。根据我们前面讲的数组寻址公式，a[3]也会被定位到某块不属于数组的内存地址上，而这个地址正好是存储变量 i 的内存地址，那么 a[3]=0 就相当于 i=0，所以就会导致代码无限循环。</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/featured.jpg"/></item><item><title>杂记</title><link>https://mykaneki.github.io/docs/%E6%9D%82%E8%AE%B0/</link><pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E6%9D%82%E8%AE%B0/</guid><description>彻底删除idea项目> 彻底删除idea项目 # remove module 手动删除文件夹 删除项目引用 使用Everything搜索找到 项目.contexts.zip和项目.tasks.zip两个文件，将其删除 idea快捷键> idea快捷键 # 批量编辑 ：alt + shift+insert
+方法说明注释：输入/** ,点击“Enter”</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mykaneki.github.io/docs/%E6%9D%82%E8%AE%B0/featured.jpg"/></item></channel></rss>
