@@ -12,7 +12,7 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
-mainSections = ["posts"]
+mainSections = ["docs"]
 # robots = ""
 
 disableImageOptimization = true
@@ -33,9 +33,9 @@ defaultBackgroundImage = "/img/魏无羡和蓝忘机.jpg"
   layout = "hero" # valid options: page, profile, hero, card, background, custom
   homepageImage = "/img/魏无羡和蓝忘机.jpg" # used in: hero, and card
   showRecent = true
-  showRecentItems = 10
+  showRecentItems = 8
   showMoreLink = true
-  showMoreLinkDest = "posts"
+  showMoreLinkDest = "docs"
   cardView = true
   cardViewScreenWidth = true
   layoutBackgroundBlur = false # only used when layout equals background

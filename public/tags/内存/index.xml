@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>内存 on mykaneki&#39;s blog</title>
+    <link>https://mykaneki.github.io/tags/%E5%86%85%E5%AD%98/</link>
+    <description>Recent content in 内存 on mykaneki&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/%E5%86%85%E5%AD%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>细节或技巧</title>
+      <link>https://mykaneki.github.io/posts/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mykaneki.github.io/posts/%E7%BB%86%E8%8A%82%E6%88%96%E6%8A%80%E5%B7%A7/</guid>
+      <description>数组越界问题&gt; 数组越界问题 # int main(int argc, char* argv[]){ int i = 0; int arr[3] = {0}; for(; i&amp;lt;=3; i++){ arr[i] = 0; printf(&amp;#34;hello world\n&amp;#34;); } return 0; } 疑问：这段代码的运行结果理论上是无限打印，实际上VS编译器中只打印了四次。
+在 C 语言中，只要不是访问受限的内存，所有的内存空间都是可以自由访问的。根据我们前面讲的数组寻址公式，a[3]也会被定位到某块不属于数组的内存地址上，而这个地址正好是存储变量 i 的内存地址，那么 a[3]=0 就相当于 i=0，所以就会导致代码无限循环。</description>
+    </item>
+    
+  </channel>
+</rss>
