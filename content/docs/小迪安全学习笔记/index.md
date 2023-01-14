@@ -308,7 +308,7 @@ Accept-Encoding：指出浏览器可以接受的编码方式。编码方式不�
 
 ### **子域名收集**
 
-
+{{< article link="/posts/subdomian/" >}}
 
 ### **exe后门功能及危害**
 
