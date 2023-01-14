@@ -13,17 +13,17 @@
 [[main]]
  name = "文章"
  pageRef = "posts"
- weight = 10
+ weight = 20
 
 [[main]]
  name = "系列"
  pageRef = "series"
- weight = 20
+ weight = 30
 
 [[main]]
  name = "文档"
  pageRef = "docs"
- weight = 30
+ weight = 10
 
 # [[main]]
 #  name = "标签"
@@ -42,6 +42,9 @@
   weight = 10
 
 [[footer]]
-  name = "分类"
-  pageRef = "categories"
-  weight = 20
+  name = "系列"
+  pageRef = "series"
+  weight = 30
+  # name = "分类"
+  # pageRef = "categories"
+  # weight = 20
