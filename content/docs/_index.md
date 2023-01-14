@@ -5,9 +5,5 @@ showDate: true
 ---
 
 {{< lead >}}
-一些笔记
+长笔记
 {{< /lead >}}
-
-This section contains everything you need to know about Blowfish.
-
----

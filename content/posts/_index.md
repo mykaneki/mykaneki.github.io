@@ -5,5 +5,5 @@ showDate: true
 ---
 
 {{< lead >}}
-记录
+短记录
 {{< /lead >}}
