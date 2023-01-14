@@ -10,7 +10,7 @@
 被动子域名收集的方式：
 信息泄露 搜索引擎 网络空间测绘引擎（网络资产搜索引擎） 证书透明 第三方DNS服务 AS 号码查询 SAN 收集 使用公共数据集 主动收集是指，通过与目标系统进行交互，对子域名进行收集。因为需要和目标系统进行交互，很可能出现高频访问等情况，有触犯安全产品告警的风险。
 主动收集子域名的方式：
-字典枚举 置换扫描 域传送漏洞 DNSSEC 域名缓存侦测技术 被动子域名收集> 被动子域名收集 # 信息泄露> 信息泄露 # corssdomain.</description></item><item><title>基础入门</title><link>https://mykaneki.github.io/docs/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link><pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid><description>概念名词> 概念名词 # 域名> 域名 # 什么是域名
+字典枚举 置换扫描 域传送漏洞 DNSSEC 域名缓存侦测技术 被动子域名收集> 被动子域名收集 # 信息泄露> 信息泄露 # corssdomain.</description></item><item><title>小迪安全学习笔记-基础入门</title><link>https://mykaneki.github.io/docs/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link><pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid><description>概念名词> 概念名词 # 域名> 域名 # 什么是域名
 顶级域名、二级域名和多级域名
 域名发现对安全测试的意义
 旁站攻击 DNS> DNS # 什么是 DNS？
