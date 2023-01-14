@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>子域名 on mykaneki's blog</title><link>https://mykaneki.github.io/tags/%E5%AD%90%E5%9F%9F%E5%90%8D/</link><description>Recent content in 子域名 on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 10 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/%E5%AD%90%E5%9F%9F%E5%90%8D/index.xml" rel="self" type="application/rss+xml"/><item><title>子域名收集姿势总结</title><link>https://mykaneki.github.io/posts/subdomian/</link><pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/subdomian/</guid><description>为什么需要进行子域名收集？> 为什么需要进行子域名收集？ # 扩大资产范围，增加漏洞发现的概率
+众所周知，一般情况下主站的安全性可能相对较高，而一些不常用的子站或者上线不久的站点，可能安全方面的考虑还没有很周全，可能成为目标系统的脆弱点
+通常情况下，同一组织采用相同应用搭建多个服务的可能性很大，以及补丁的情况也可能大致相同，因此，存在相同漏洞的概率非常大
+子域名收集的方式> 子域名收集的方式 # 子域名收集通常分为两种方式，分别为被动收集和主动收集。
+被动收集是指，在不与目标系统进行交互的情况下，通过第三方进行收集。这种方式有着明显的优势，因为不需要和目标系统进行交互，所以不会对目标系统造成任何影响，更不会触发任何安全产品的告警。
+被动子域名收集的方式：
+信息泄露 搜索引擎 网络空间测绘引擎（网络资产搜索引擎） 证书透明 第三方DNS服务 AS 号码查询 SAN 收集 使用公共数据集 主动收集是指，通过与目标系统进行交互，对子域名进行收集。因为需要和目标系统进行交互，很可能出现高频访问等情况，有触犯安全产品告警的风险。
+主动收集子域名的方式：
+字典枚举 置换扫描 域传送漏洞 DNSSEC 域名缓存侦测技术 被动子域名收集> 被动子域名收集 # 信息泄露> 信息泄露 # corssdomain.</description></item></channel></rss>

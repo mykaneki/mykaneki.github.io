@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>小迪安全学习笔记 on mykaneki's blog</title><link>https://mykaneki.github.io/series/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link><description>Recent content in 小迪安全学习笔记 on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/series/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>基础入门</title><link>https://mykaneki.github.io/docs/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link><pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E5%B0%8F%E8%BF%AA%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid><description>概念名词> 概念名词 # 域名> 域名 # 什么是域名
+顶级域名、二级域名和多级域名
+域名发现对安全测试的意义
+旁站攻击 DNS> DNS # 什么是 DNS？
+域名系统（Domain Name System）。它是一个域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。DNS使用UDP端口53。对于每一级域名长度的限制是63个字符，域名总长度则不能超过253个字符。 本地 HOSTS 与 DNS 的关系？
+Hosts在本地将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当我们访问域名时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。 Hosts地址：C:\Windows\System32\drivers\etc\hosts CDN 是什么？与 DNS 的关系？
+CDN：是构建在数据网络上的一种分布式的内容分发网。可以提高系统的响应速度，也可以一定程度的拦截/防御攻击。 在攻击的时候，如果找不到源站，那么我们扫描的就是CDN节点中的缓存，是一种阻碍。 常见的 DNS 安全攻击有哪些？</description></item></channel></rss>
