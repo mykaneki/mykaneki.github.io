@@ -87,3 +87,5 @@ tags: [‘docker’]
  关闭docker
  `sudo service docker stop` 
 
+
+

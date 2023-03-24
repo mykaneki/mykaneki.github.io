@@ -295,3 +295,9 @@ apt-get install ldnsutils
     > 支持docker
     >
     > 中文友好
+    
+3. [bit4woo/teemo: A Domain Name & Email Address Collection Tool (github.com)](https://github.com/bit4woo/teemo) （较老，python2.7）
+
+4. [laramies/theHarvester: E-mails, subdomains and names Harvester - OSINT (github.com)](https://github.com/laramies/theHarvester) 
+
+![img](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202302261040067.png)

@@ -104,7 +104,7 @@ tags: ["密码学"]
       >
       >    ② 伪随机数
       >
-      > 2. 单密钥\对称密钥加密算法 Single-Key \Asymmetric Algorithms
+      > 2. 单密钥\对称密钥加密算法 Single-Key \Symmetric Algorithms
       >
       >    ① 分组\块密码 Block cipher
       >

@@ -76,3 +76,66 @@ CDN 技术对于安全渗透的影响，具体如下：
 - 黑暗引擎搜指定hash文件
 
 - 扫全网fuckcdn，w8 fuckcdn，zmap等（这个方法不推荐）
+
+## 架构、搭建、WAF等
+
+![图片](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301251438163.png)
+
+**站点搭建分析**
+
+> 寻找多个目标
+
+- 目录型站点
+
+- 端口类站点
+
+- 子域名站点
+
+- 类似域名站点
+
+- 旁注, c段站点
+
+  旁注：同服务器不同站点
+
+  C段：不同服务器不同站点 同网段
+
+  > 工具：[同IP站点](https://www.webscan.cc/)
+
+- 搭建软件特征站点
+
+**WAF防护分析**
+
+- 什么是WAF应用? --  Web应用防护系统（也称为：网站应用级入侵防御系统。英文：Web Application Firewall，简称：WAF）。
+
+- 如何快速识别WAF?
+
+  > 工具 [wafw00f](https://github.com/EnableSecurity/wafw00f)
+
+- 识别WAF对于安全测试的意义?
+
+  找到管理后台
+
+  > 宝塔 8888
+  >
+  > phpmyadmin
+
+![image-20230125144222494](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301251442567.png) 
+
+## APP及其他资产
+
+### APE提取一键反编译提取
+
+- 使用反编译工具，尝试获取包了里的源码，逆向出网址，进而转为web渗透
+
+### APP抓数据包进行工具配合
+
+- 使用burp suite设置代理，或者wireshark抓数据包，进行分析，同样是找出网址
+
+找出网址后就可以一通乱扫，用黑暗引擎或者nmap进行端口扫描
+
+观察黑暗引擎的搜索结果，观察不同的报文，点开相应的端口，可能可以进入管理后台，也可以在网址上添加探针目录（robots.txt phpinfo ），看看是否能获取到更多信息
+
+## 资产监控拓展
+
+1. Github监控 -- 便于收集整理最新exp或poc -- 便于发现相关测试目标的资产
+2. 子域名挖掘机
