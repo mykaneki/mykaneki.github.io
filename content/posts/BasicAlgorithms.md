@@ -117,11 +117,7 @@ public static String solve (String s, String t) {
 
 ## 前缀和
 
-![image-20230315195928594](D:\Hugo\Sites\mykameki\assets\img\BasicAlgorithms\image-20230315195928594.png)
-
-![image-20230315200107976](D:\Hugo\Sites\mykameki\assets\img\BasicAlgorithms\image-20230315200107976.png)
-
-
+![image-20230315195928594](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202303241358690.png?token=ASIJOH2RTMOKID3LB3TTVGLEDU6FE)
 
 
 
@@ -129,6 +125,5 @@ public static String solve (String s, String t) {
 
 已知A，构造B使得A是B的前缀和
 
-![image-20230315200208496](D:\Hugo\Sites\mykameki\assets\img\BasicAlgorithms\image-20230315200208496.png)
+![image-20230315200208496](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202303241358940.png?token=ASIJOH2MRTGZZTR3CETDY3DEDU6FS)
 
-![image-20230315200219806](D:\Hugo\Sites\mykameki\assets\img\BasicAlgorithms\image-20230315200219806.png)

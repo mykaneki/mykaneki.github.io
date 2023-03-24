@@ -6,15 +6,15 @@ tags: ["sql"]
 
 表结构
 
-![image-20220410173604674](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202204101736765.png)![image-20220410173624166](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202204101736253.png)![image-20220410173703000](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202204101737074.png)
+![image-20220410173624166](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202303241405630.png)![image-20230324140520329](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202303241405408.png)
 
 - 查询选修了“苏亚步”教师开设课程的所有学生的学号和姓名
 
-  ![img](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202204101737176.png)
+  ![image-20230324140533229](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202303241405288.png)
 
 - 统计每一年龄选修课程的学生人数
 
-  ![img](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202204101737159.png)
+  ![image-20230324140540303](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202303241405361.png)
 
 ### date如何输入数据
 

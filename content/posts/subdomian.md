@@ -107,8 +107,6 @@ DNS (域名系统)是一种分布式的解析系统,它将域名映射到对应�
 
 这些信息包括 URL，对应的IP地址,DNS服务器等, 最后会存储到 VirusTotal 的数据库中供用户使用. 这些信息可以帮助用户更好的分析和了解URL访问的相关情况，如可疑的URL,域名查询等。
 
-![image-20230111112039234](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301111120320.png)
-
 > 其他在线DNS工具汇总：
 >
 > - https://decoder.link/
@@ -149,8 +147,6 @@ SAN证书在构建多域名的网站的时候有重要的作用,这样就不用�
 2. 从获取的证书信息中提取出证书的 Subject Alternative Name (SAN) 域。
 3. 从 SAN 域中提取出包含子域名的信息，去重、排序。
 4. 得到的子域名信息可以用于进一步的安全分析和管理。
-
-![image-20230111115959224](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301111159291.png)
 
 ### 使用公共数据集
 
@@ -300,4 +296,3 @@ apt-get install ldnsutils
 
 4. [laramies/theHarvester: E-mails, subdomains and names Harvester - OSINT (github.com)](https://github.com/laramies/theHarvester) 
 
-![img](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202302261040067.png)
