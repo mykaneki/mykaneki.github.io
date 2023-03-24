@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机网络 on mykaneki's blog</title><link>https://mykaneki.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link><description>Recent content in 计算机网络 on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 03 Jan 2023 17:48:29 +0800</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>计网英文复习</title><link>https://mykaneki.github.io/docs/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/</link><pubDate>Tue, 03 Jan 2023 17:48:29 +0800</pubDate><guid>https://mykaneki.github.io/docs/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/</guid><description>chapter 1 Computer Networks and the Internet> chapter 1 Computer Networks and the Internet # chapter 1 Computer Networks and the Internet
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机网络 on mykaneki&#39;s blog</title>
+    <link>https://mykaneki.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 计算机网络 on mykaneki&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Jan 2023 17:48:29 +0800</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计网英文复习</title>
+      <link>https://mykaneki.github.io/posts/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/</link>
+      <pubDate>Tue, 03 Jan 2023 17:48:29 +0800</pubDate>
+      
+      <guid>https://mykaneki.github.io/posts/%E8%AE%A1%E7%BD%91%E8%8B%B1%E6%96%87%E5%A4%8D%E4%B9%A0/</guid>
+      <description>chapter 1 Computer Networks and the Internet&gt; chapter 1 Computer Networks and the Internet # chapter 1 Computer Networks and the Internet
 interconnects 互相连接
 Intranet 内网
-twisted-pair copper wire 双绞铜线</description></item></channel></rss>
+twisted-pair copper wire 双绞铜线</description>
+    </item>
+    
+  </channel>
+</rss>
