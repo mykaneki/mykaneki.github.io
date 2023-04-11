@@ -32,7 +32,7 @@ tags: [‘docker’]
 
 6. 进入容器
 
-   `docker exec -it 44fc0f0582d9 /bin/sh`
+   `docker exec -it $(docker ps -q) /bin/bash`
 
 7. docker批量停止或删除容器
 

@@ -1,3 +1,13 @@
+---
+title: "用户中心项目"
+date: 2023-02-25
+tags: ["项目"]
+showDate: true
+draft: true
+---
+
+
+
 ## 前端初始化 - ANT DESIGN PRO
 
 1. 下载node、mysql
@@ -67,7 +77,7 @@
 
    ![image-20230304191637748](D:\Hugo\Sites\mykameki\assets\img\index\image-20230304191637748.png)
 
-   ![image-20230304192542581](D:\Hugo\Sites\mykameki\assets\img\index\image-20230304192542581.png)
+   <img src="D:\Hugo\Sites\mykameki\assets\img\index\image-20230304192542581.png" alt="image-20230304192542581" style="zoom:150%;" />
 
 3. 根据官方文档，导入Mybatis-Plus的依赖，并配置
 
