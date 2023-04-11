@@ -18,7 +18,7 @@ Ubuntu apt</description></item><item><title>Linux文件详情</title><link>https
 第九列：文件路径
 附录> 附录 # 1. 文件类型> 1. 文件类型 # d：目录文件 -：普通文件 p：管理文件 l：链接文件 b：块设备文件 c：字符设备文件 s：套接字文件 2.</description></item><item><title>重装电脑</title><link>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</guid><description>git安装与配置> git安装与配置 # git下载
 配置账号信息
-# git config --global user.name &amp;#34;kaneki_my&amp;#34; # git config --global user.email &amp;#34;2795188612@qq.com&amp;#34; # ssh-keygen -t rsa -C &amp;#34;2795188612@qq.com&amp;#34; 到git仓库，添加秘钥
+# git config --global user.name &amp;#34;m&amp;#34; # git config --global user.email &amp;#34;2795188612@qq.com&amp;#34; # ssh-keygen -t rsa -C &amp;#34;2795188612@qq.com&amp;#34; 到git仓库，添加秘钥
 查看密钥存放路径
 ​ 将.pub 的内容复制到github上
 GitHub上的git文档 git-tips/README.md at master · kwshare/git-tips (github.</description></item></channel></rss>

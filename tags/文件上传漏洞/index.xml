@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>‘文件上传漏洞’ on mykaneki's blog</title><link>https://mykaneki.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/</link><description>Recent content in ‘文件上传漏洞’ on mykaneki's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mykaneki.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/index.xml" rel="self" type="application/rss+xml"/><item><title>upload-labs</title><link>https://mykaneki.github.io/docs/upload-labs/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/upload-labs/</guid><description>靶场搭建> 靶场搭建 # https://github.com/c0ny1/upload-labs
+基本思路> 基本思路 # 禁用 JavaScript
+MIME 绕过
+扩展后缀名
+配置文件.htaccess
+自建后缀名，通配后缀名
+文件上传后文件名可能会修改，此时只要后缀名匹配了，一样可以识别
+webshell 工具可能没法利用部分已有的后缀，比如 .jpg
+各种绕过
+大小写绕过 在文件名的首尾去加点 在文件名的首尾加空格 在文件名的首尾加::$DATA Pass - 01> Pass - 01 # 客户端检查</description></item></channel></rss>

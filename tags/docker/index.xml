@@ -10,7 +10,7 @@ docker ps
 停止并删除容器
 docker stop &amp;lt;container id|name=``&amp;quot;&amp;quot;``&amp;gt;&amp;lt;/container&amp;gt;</description></item><item><title>重装电脑</title><link>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</link><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/docs/%E9%87%8D%E8%A3%85%E7%94%B5%E8%84%91/</guid><description>git安装与配置> git安装与配置 # git下载
 配置账号信息
-# git config --global user.name &amp;#34;kaneki_my&amp;#34; # git config --global user.email &amp;#34;2795188612@qq.com&amp;#34; # ssh-keygen -t rsa -C &amp;#34;2795188612@qq.com&amp;#34; 到git仓库，添加秘钥
+# git config --global user.name &amp;#34;m&amp;#34; # git config --global user.email &amp;#34;2795188612@qq.com&amp;#34; # ssh-keygen -t rsa -C &amp;#34;2795188612@qq.com&amp;#34; 到git仓库，添加秘钥
 查看密钥存放路径
 ​ 将.pub 的内容复制到github上
 GitHub上的git文档 git-tips/README.md at master · kwshare/git-tips (github.</description></item><item><title>Mysql+docker</title><link>https://mykaneki.github.io/posts/mysql+docker/</link><pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate><guid>https://mykaneki.github.io/posts/mysql+docker/</guid><description> 版本8.0.19
