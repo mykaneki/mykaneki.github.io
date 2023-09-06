@@ -644,7 +644,7 @@ const onChange = (activeName: string) => {
 
 ## 多数据源获取
 
-### 爬虫
+### 爬虫 —— 获取文章
 
 1. 抓包分析：URL、方法、body、response
 
@@ -756,9 +756,118 @@ const onChange = (activeName: string) => {
 
       ![image-20230409152633327](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202304091526404.png)
 
-   视频 0.47
+3. 将编写好的爬虫代码复制进 `job/once` 
+
+   ![image-20230413145027244](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202304131450352.png)
+
+   implements CommandLineRunner 需要重写run方法
+
+   取消`@Component`注释就会开启任务，每次启动都会先执行一次run方法
+
+### 生成多几个数据 —— 用户列表
+
+![image-20230413151751755](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202304131517831.png)
+
+### 抓取必应图片 —— 图片列表
+
+新建一个实体类 Picture
+
+```java
+@Data
+public class Picture {
+    private String title;
+    private String url;
+}
+```
+
+使用搜索图片的 api 
+
+1. [Pexels API](https://www.pexels.com/zh-cn/api/documentation/) 以这个为主
+2. [Pixbay API](https://pixabay.com/api/docs/)
+3. [Unsplash API](https://unsplash.com/developers)
+
+编写测试代码
+
+```java
+@Test
+void testFetchPicture() throws IOException {
+    // 1. 获取数据
+    String query = "nature";
+    String url = "https://api.pexels.com/v1/search?query="+query+"&per_page=10";
+    String result = HttpRequest.get(url).header("Authorization","nXXGVak343LLcPwHPmHA2pAMREN8DFMWkw2G71Y58TFwlZgDXy7Q8M1q").execute().body();
+    // 2. json转对象
+    Map map = JSONUtil.toBean(result, Map.class);
+    // 3. 从对象中获取数据
+    List<Picture> pictureList = new ArrayList<>();
+    JSONArray photos = (JSONArray) map.get("photos");
+    for (Object photo : photos) {
+        Picture picture = new Picture();
+        JSONObject tempPhoto = (JSONObject) photo;
+        String title = tempPhoto.getStr("alt");
+        String originalSrc = tempPhoto.getJSONObject("src").getStr("original");
+        picture.setUrl(originalSrc);
+        picture.setTitle(title);
+        pictureList.add(picture);
+        System.out.println(title + " " + originalSrc);
+    }
+}
+```
+
+运行结果
+
+![image-20230413194346528](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202304131943685.png)
+
+
 
 ## 前后端接口调通
+
+1. 编写`PictureService`，封装成`Page` 
+
+   ```java
+       @Override
+       public Page<Picture> searchPicture(String searchText, long pageNum, long pageSize) {
+           // 1. 获取数据
+           // String query = "nature";
+           String url = "https://api.pexels.com/v1/search?query="+searchText+"&per_page="+pageSize;
+           String result = HttpRequest.get(url).header("Authorization","nXXGVak343LLcPwHPmHA2pAMREN8DFMWkw2G71Y58TFwlZgDXy7Q8M1q").execute().body();
+           // 2. json转对象
+           Map map = JSONUtil.toBean(result, Map.class);
+           // 3. 从对象中获取数据
+           List<Picture> pictureList = new ArrayList<>();
+           JSONArray photos = (JSONArray) map.get("photos");
+           for (Object photo : photos) {
+               Picture picture = new Picture();
+               JSONObject tempPhoto = (JSONObject) photo;
+               String title = tempPhoto.getStr("alt");
+               String originalSrc = tempPhoto.getJSONObject("src").getStr("original");
+               picture.setUrl(originalSrc);
+               picture.setTitle(title);
+               pictureList.add(picture);
+               System.out.println(title + " " + originalSrc);
+           }
+           Page<Picture> picturePage = new Page<>(pageNum, pageSize);
+           picturePage.setRecords(pictureList);
+           return picturePage;
+       }
+   ```
+
+2. 处理 controller、service 层
+
+   ```java
+       @PostMapping("/list/page/vo")
+       public BaseResponse<Page<Picture>> listPictureByPage(@RequestBody PictureQueryRequest pictureQueryRequest,
+                                                            HttpServletRequest request) {
+           long current = pictureQueryRequest.getCurrent();
+           long size = pictureQueryRequest.getPageSize();
+           String searchText = pictureQueryRequest.getSearchText();
+           // 限制爬虫
+           ThrowUtils.throwIf(size > 20, ErrorCode.PARAMS_ERROR);
+           Page<Picture> pictures = pictureService.searchPicture(searchText, current, size);
+           return ResultUtils.success(pictures);
+       }
+   ```
+
+   时间 1.33
 
 ## 聚合搜索业务场景分析
 

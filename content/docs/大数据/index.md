@@ -104,7 +104,7 @@ volumes:
 
 由于kali虚拟机和宿主机不通，所以需要在kali里面访问web页面
 
-![http://172.18.0.2:9870/](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210021945671.png)
+![http://172.18.0.2:9870/](../img/202210021945671.png)
 
 选择一个结点，进入执行命令
 
@@ -167,11 +167,11 @@ hadoop fs -setrep 10 /jingguo/shuguo.txt
 
 ```
 
-![修改文件所有者、所有群](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210021649846.png)
+![修改文件所有者、所有群](../img/202210021649846.png)
 
-![image-20221002171121099](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210021711173.png)
+![image-20221002171121099](../img/202210021711173.png)
 
-![大文件上传示例](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210021918873.png)
+![大文件上传示例](../img/202210021918873.png)
 
 > 比较大的文件上传会分为多个block
 
@@ -193,7 +193,7 @@ hadoop fs -setrep 10 /jingguo/shuguo.txt
 
 - put时遇到的一个INFO，经过搜索，这是正常的，不用理会
 
-![image-20221002092838282](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210020928389.png)
+![image-20221002092838282](../img/202210020928389.png)
 
 - 追加文件时出现错误
 
@@ -252,7 +252,7 @@ appendToFile: Failed to replace a bad datanode on the existing pipeline due to n
    >
    > 查看shell脚本可以发现，它循环遍历profile.d里所有.`sh`后缀的文件，将其作为环境变量。
    >
-   > ![image-20221001102137859](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210011021896.png)
+   > ![image-20221001102137859](../img/202210011021896.png)
 
    `vim my_env.sh` 没有文件会新建
 
@@ -278,13 +278,13 @@ appendToFile: Failed to replace a bad datanode on the existing pipeline due to n
 
 5. 测试，使用命令`hadoop`
 
-​		若没有多出来一个#符号则成功![image-20221001100001079](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210011000120.png)
+​		若没有多出来一个#符号则成功![image-20221001100001079](../img/202210011000120.png)
 
-![hadoop文件](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210010922464.png)
+![hadoop文件](../img/202210010922464.png)
 
 bin 存放命令
 
-![image-20221001092450680](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210010924742.png)
+![image-20221001092450680](../img/202210010924742.png)
 
 hdfs 存储
 
@@ -296,30 +296,29 @@ yarn 资源调度
 
 /etc/hadoop
 
-![配置文件](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210010928024.png)
+![配置文件](../img/202210010928024.png)
 
  include 类似于头文件
 
-![image-20221001092940863](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210010929905.png)
+![image-20221001092940863](../img/202210010929905.png)
 
 
 
 ./lib/native本地动态连接库
 
-![image-20221001093121824](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210010931874.png)
+![image-20221001093121824](../img/202210010931874.png)
 
 sbin
 
-![image-20221001093544490](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210010935587.png)
+![image-20221001093544490](../img/202210010935587.png)
 
 share 学习资料，包括文档和官方案例
 
-![image-20221001093709937](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210010937986.png)
+![image-20221001093709937](../img/202210010937986.png)
 
 官方样例
 
-![image-20221001093756440](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210010937515.png)
-
+![image-20221001093756440](../img/202210010937515.png)
 
 
 

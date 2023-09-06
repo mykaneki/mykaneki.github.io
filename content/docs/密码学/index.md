@@ -57,7 +57,7 @@ tags: ["密码学"]
 
    > 任何危及信息系统安全的行为。
 
-   ![攻击的类型](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209241137590.png) 
+   ![攻击的类型](../img/202209241137590.png) 
 
    1. 被动攻击
 
@@ -94,7 +94,7 @@ tags: ["密码学"]
 
    1. 加密 Cryptographic algorithms
 
-      ![加密算法的类型](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209242101173.png)
+      ![加密算法的类型](../img/202209242101173.png)
 
       > 1. 无密钥加密算法 Keyless Algorithms
       >
@@ -118,7 +118,7 @@ tags: ["密码学"]
       >
       >    将通信双方共享的密钥K和消息m作为输入，生成一个关于K和m的函数值MAC，将其作为认证标记(Tag)。发送时，将消息和认证码同时发送给接收方，若接收方用消息和共享密钥生成相同的消息认证码，则认证通过。
       >
-      >    ![消息认证码图示](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209242115998.png) 
+      >    ![消息认证码图示](../img/202209242115998.png) 
       >
       >    
       >
@@ -126,7 +126,7 @@ tags: ["密码学"]
       >
       >    ① 数字签名算法 Digital signature algorithm
       >
-      >    ![签名生成流程](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209242149017.jpeg) 
+      >    ![签名生成流程](../img/202209242149017.jpeg) 
       >
       >    ② 密钥交换 Key exchange
       >
@@ -190,11 +190,11 @@ tags: ["密码学"]
 
 4. 安全服务和机制间的联系
 
-   ![安全服务和机制间的联系](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209242152777.png)
+   ![安全服务和机制间的联系](../img/202209242152777.png)
 
    ## 1.3 网络安全关键因素 
 
-   ![网络安全关键因素](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209242203320.png)
+   ![网络安全关键因素](../img/202209242203320.png)
 
    1. 通信安全
 
@@ -308,7 +308,7 @@ $$
   | 密钥 | a    | b    | c    | a    | b    | c    | a    | b    | c    | a    |
   | 密文 | H    | f    | n    | l    | p    | y    | o    | s    | n    | d    |
 
-  ![img](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209251343709.png)
+  ![img](../img/202209251343709.png)
 
   - 即使有如此算力能够穷举出来也没办法根据明文信息判断哪一句是真正的明文，因为会有很多句都有具体的意义
 
@@ -353,7 +353,7 @@ $$
 
 ## 2.4 转轮机
 
-![三轴转轮机](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209260937121.png)
+![三轴转轮机](../img/202209260937121.png)
 
 使用n个轮子密钥长度就是替换过n次的Vigenere密码
 $$

@@ -22,7 +22,7 @@ showDate: true
 
    查看密钥存放路径
 
-   ![image-20220930222249737](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209302222791.png)
+   ![image-20220930222249737](../img/202209302222791.png)
 
    ​	将`.pub` 的内容复制到github上
 
@@ -74,13 +74,13 @@ showDate: true
 
       `New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow` 
 
-      ![image-20221121110125897](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051813566.png)
+      ![image-20221121110125897](../img/202301051813566.png)
 
       name :`{a64653d0-836e-4b5f-b6f0-dc1d058edca7}`
 
       然后会在Windows的防火墙高级设置的入站规则里会看到一条名为`WSL`的新规则
 
-      ![image-20221121110220846](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051813463.png)
+      ![image-20221121110220846](../img/202301051813463.png)
 
    2. vim ~/.local_profile
    
@@ -99,9 +99,9 @@ showDate: true
    
 3. 在powershell上固定kali终端
 
-   点击设置 >> 左下角打开json文件 >> 进行编辑![image-20221130192757835](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051814095.png)
+   点击设置 >> 左下角打开json文件 >> 进行编辑![image-20221130192757835](../img/202301051814095.png)
 
-   ![image-20221130192904950](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051814761.png)
+   ![image-20221130192904950](../img/202301051814761.png)
 
    ```json
    {
@@ -266,7 +266,7 @@ showDate: true
    ifconfig #查看IP地址
    ```
 
-   ![Xshel连接](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051814640.png)
+   ![Xshel连接](../img/202301051814640.png)
 
 1. git配置（参考第一部分）
 
@@ -327,7 +327,7 @@ showDate: true
 
 1. [下载jdk8](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)，选择Linux x86 Compressed Archive
 
-   ![image-20221003120717176](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202210031207261.png)
+   ![image-20221003120717176](../img/202210031207261.png)
 
 2. 下载并解压缩
 
@@ -478,7 +478,7 @@ showDate: true
 
           修改效果如图，请注意这里引号是英文的，别手抖打错了
 
-          ![image-20220730150803354](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/image-20220730150803354.png)
+          ![image-20220730150803354](../img/image-20220730150803354.png)
 
 ## docker desktop
 
@@ -490,7 +490,7 @@ showDate: true
 
    2. 写入docker-setting
 
-   ![镜像配置](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209301219149.png)
+   ![镜像配置](../img/202209301219149.png)
 
    3. 测试是否成功
 
@@ -498,7 +498,7 @@ showDate: true
       docker info
       ```
 
-      ![image-20220930122050978](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209301220049.png)
+      ![image-20220930122050978](../img/202209301220049.png)
 
 2. 以特权程序创建和运行容器，便于使用服务
    1. `docker run -d --name centos --privileged=true centos:centos7 /usr/sbin/init`
@@ -522,9 +522,9 @@ showDate: true
 
    1. `yum -y install vim*` 
 
-   ![开始](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209301224949.png)
+   ![开始](../img/202209301224949.png)
 
-   ![完成](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209301225149.png)
+   ![完成](../img/202209301225149.png)
 
    2. 配置vim
 
@@ -540,7 +540,7 @@ showDate: true
       syntax on
       ```
 
-      ![代码的意思](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202209301232079.png)
+      ![代码的意思](../img/202209301232079.png)
 
       3. `:wq` 保存并退出
 
@@ -570,17 +570,17 @@ showDate: true
 
 ### 卸载子系统
 
-![image-20221119110721646](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825459.png)
+![image-20221119110721646](../img/202301051825459.png)
 
 注销
 
 `wsl --unregister kali-linux`
 
-![image-20221119110827274](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825658.png)
+![image-20221119110827274](../img/202301051825658.png)
 
 ### 下载kali-linux
 
-![image-20221119111350541](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825452.png)
+![image-20221119111350541](../img/202301051825452.png)
 
 点击打开，设置`username`和`password`
 
@@ -604,7 +604,7 @@ showDate: true
 
 ping命令有问题
 
-![image-20221119113920129](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825066.png)
+![image-20221119113920129](../img/202301051825066.png)
 
 **第二次bug**
 
@@ -628,7 +628,7 @@ ping依旧有问题
 
 测试，kali不可以ping但是root可以，并且浏览器可以打开
 
-![image-20221119131455621](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825912.png)
+![image-20221119131455621](../img/202301051825912.png)
 
 > **解决普通用户不能ping但是root可以的问题**
 >
@@ -642,7 +642,7 @@ ping依旧有问题
 >
 > `chmod u+s /bin/ping`
 >
-> ![image-20221119132942370](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825037.png)
+> ![image-20221119132942370](../img/202301051825037.png)
 
 **换源**
 
@@ -687,7 +687,7 @@ deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main non
 
 如果是从微软官方下载`WSL`离线包，文件后缀为`.appx`，我们手动改为`.zip`，然后解压，`install.tar.gz`就是我们后续使用的安装文件。
 
-![image-20221119120517839](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825229.png)
+![image-20221119120517839](../img/202301051825229.png)
 
 >lxrunoffline i -s -n <WSL名称> -d <安装路径> -f <安装包路径>.tar.gz
 >
@@ -699,7 +699,7 @@ deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main non
 >
 >报错
 >
->![image-20221119120838971](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825580.png)
+>![image-20221119120838971](../img/202301051825580.png)
 >
 >我猜这个是因为注册表的问题
 
@@ -707,7 +707,7 @@ deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main non
 
 ### 安装Windows Subsystem for Linux
 
-![image-20221119110039983](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825910.png)
+![image-20221119110039983](../img/202301051825910.png)
 
 更新wsl
 
@@ -766,7 +766,7 @@ sudo /etc/init.d/xrdp start
 
 注意这里的端口号应当与上面修改配置中一致
 
-![image-20221119124225714](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301051825829.png)
+![image-20221119124225714](../img/202301051825829.png)
 
 **下载网络工具**
 

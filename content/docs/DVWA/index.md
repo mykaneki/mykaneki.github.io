@@ -90,25 +90,25 @@ Username：`admin` 	Password：`password`
 
 提交请求，使用bs抓包
 
-![image-20221031141450425](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071438738.png)
+![image-20221031141450425](../img/202301071438738.png)
 
 观察提交网址 `http://127.0.0.1/vulnerabilities/brute/?username=admin&password=password&Login=Login#`  
 
 可知道在`/vulnerabilities/brute/`路径下找到包内容
 
-![image-20221031141421215](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071438502.png)
+![image-20221031141421215](../img/202301071438502.png)
 
 使用bs内置的工具 Intruder (入侵者)
 
-![image-20221031141538396](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071438836.png)
+![image-20221031141538396](../img/202301071438836.png)
 
 标记需要替换的内容，不需要替换的取消标记
 
-![取消标记](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071438573.png)
+![取消标记](../img/202301071438573.png)
 
 告诉bs以何种方式替换（攻击类型）以及替换成什么数据（字典）
 
-![攻击类型](DVWA.assets/image-20221031141901363.png)
+![攻击类型](../DVWA.assets/image-20221031141901363.png)
 
 - Sniper
 
@@ -128,19 +128,19 @@ Username：`admin` 	Password：`password`
 
 给username添加尝试数据
 
-![username](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071438971.png)
+![username](../img/202301071438971.png)
 
 给password添加尝试数据
 
-![password](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071438723.png)
+![password](../img/202301071438723.png)
 
 开始攻击
 
-![image-20221031142703285](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071438900.png)
+![image-20221031142703285](../img/202301071438900.png)
 
 找出结果，一般情况下正确结果的返回报文长度更长
 
-![image-20221031142912124](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071438069.png)
+![image-20221031142912124](../img/202301071438069.png)
 
 ### medium
 
@@ -148,13 +148,13 @@ Username：`admin` 	Password：`password`
 
 对比low和medium的源码
 
-![源码对比](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071438432.png)
+![源码对比](../img/202301071438432.png)
 
 因此，我们还是可以使用low级别的爆破方式来对密码进行爆破
 
 攻击并找出结果
 
-![image-20221031144421623](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439621.png)
+![image-20221031144421623](../img/202301071439621.png)
 
 ### high
 
@@ -166,13 +166,13 @@ Username：`admin` 	Password：`password`
 
 将该网址在新标签页中打开，会发现提示token不正确的提示，并且也没有提示密码是否错误
 
-![image-20221031145732258](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439156.png)
+![image-20221031145732258](../img/202301071439156.png)
 
 那么，token哪来的？
 
 **源码分析**
 
-![image-20221031150245459](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439705.png)
+![image-20221031150245459](../img/202301071439705.png)
 
 anti-csrf token 一种常见的web应用安全机制，类似验证码和带token的表单
 
@@ -188,27 +188,27 @@ anti-csrf token 一种常见的web应用安全机制，类似验证码和带toke
 
 因为每次user_token需要从上次的回应中获取，因此数据列表不能继续使用Simple List类型，得换成Recursive grep
 
-![Recursive grep](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439803.png)
+![Recursive grep](../img/202301071439803.png)
 
 如何定位token？通过检查元素可以找到
 
-![image-20221031153301664](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439474.png)
+![image-20221031153301664](../img/202301071439474.png)
 
 至此，获取了初始token，然后将其填入Payloads
 
-![image-20221031153312417](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439264.png)
+![image-20221031153312417](../img/202301071439264.png)
 
 点击Options， 因为要顺序发送请求，所以要把线程数调到1
 
-![image-20221031153356417](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439782.png)
+![image-20221031153356417](../img/202301071439782.png)
 
 接下来要获取新产生的token，将其放入下一次请求报文中
 
-![image-20221101183105179](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439251.png)
+![image-20221101183105179](../img/202301071439251.png)
 
 开始攻击，查看结果
 
-![image-20221101183239758](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439246.png)
+![image-20221101183239758](../img/202301071439246.png)
 
 
 
@@ -216,9 +216,9 @@ anti-csrf token 一种常见的web应用安全机制，类似验证码和带toke
 
 分析源代码
 
-![image-20221101191510576](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439625.png)
+![image-20221101191510576](../img/202301071439625.png)
 
-![image-20221101191056785](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439373.png)
+![image-20221101191056785](../img/202301071439373.png)
 
 同一个账号可以尝试三次密码，超过三次会锁定15分钟
 
@@ -232,7 +232,7 @@ anti-csrf token 一种常见的web应用安全机制，类似验证码和带toke
 
 猜测其直接调用系统命令，直接输入baidu.com&&ls，可以看到ls命令也被运行了
 
-![image-20221119202114988](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439848.png)
+![image-20221119202114988](../img/202301071439848.png)
 
 ### medium
 
@@ -242,21 +242,21 @@ anti-csrf token 一种常见的web应用安全机制，类似验证码和带toke
 
 可以看到他是做了简单的替换，把&&变成&或者|就可以了
 
-![image-20221119202815724](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439518.png)
+![image-20221119202815724](../img/202301071439518.png)
 
 发起攻击
 
-![image-20221119202935371](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439302.png)
+![image-20221119202935371](../img/202301071439302.png)
 
 ### high
 
 查看源码，可以看到它只过滤了`|+空格` ，因此只写一个|也是可以绕过的
 
-![image-20221121153257419](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439186.png)
+![image-20221121153257419](../img/202301071439186.png)
 
 发起攻击
 
-![image-20221121153110036](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439909.png)
+![image-20221121153110036](../img/202301071439909.png)
 
 
 
@@ -264,9 +264,9 @@ anti-csrf token 一种常见的web应用安全机制，类似验证码和带toke
 
 输入baidu.com都不行了
 
-![image-20221121154043138](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439042.png)
+![image-20221121154043138](../img/202301071439042.png)
 
-![image-20221121153848618](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439247.png)
+![image-20221121153848618](../img/202301071439247.png)
 
 将输入的信息以`.`分割成四份，分别判断是否是数字
 
@@ -290,11 +290,11 @@ anti-csrf token 一种常见的web应用安全机制，类似验证码和带toke
 
 抓包查看
 
-![image-20221125130859800](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439809.png)
+![image-20221125130859800](../img/202301071439809.png)
 
 此时在另一个窗口打开这个链接，是可以打开该页面的。但是如果换一个浏览器就不可以
 
-![image-20221125131025881](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071439216.png)
+![image-20221125131025881](../img/202301071439216.png)
 
 因此该攻击的难点在于诱骗受害者点击具有转账或者修改功能的链接
 
@@ -302,7 +302,7 @@ anti-csrf token 一种常见的web应用安全机制，类似验证码和带toke
 
 查看源码
 
-![image-20221125132857052](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440398.png)
+![image-20221125132857052](../img/202301071440398.png)
 
 因此我们需要从本站诱导用户点击带有`HTTP_REFERER` 的链接
 
@@ -314,9 +314,9 @@ anti-csrf token 一种常见的web应用安全机制，类似验证码和带toke
 
 例如`http://127.0.0.1/vulnerabilities/csrf/xss.php?x=%3Cimg%20src=%221%22%3E` 
 
-![image-20221125142110309](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440889.png)
+![image-20221125142110309](../img/202301071440889.png)
 
-![image-20221125142406766](D:\OneDrive - mail.ynu.edu.cn\note\typoranote\DVWA.assets\image-20221125142406766.png) 
+![image-20221125142406766](../DVWA.assets../DVWA.assets\image-20221125142406766.png) 
 
 查看请求记录，可以看到src=1被请求了，并且相应的信息也都是携带的
 
@@ -334,7 +334,7 @@ http://127.0.0.1/vulnerabilities/csrf/xss.php?x=<img src="http%3A%2F%2F127.0.0.1
 
 发起请求
 
-![image-20221125143022761](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440757.png)
+![image-20221125143022761](../img/202301071440757.png)
 
 可以看到修改密码的请求状态码为200，表示攻击成功
 
@@ -354,7 +354,7 @@ http://127.0.0.1/vulnerabilities/csrf/?password_new=password&password_conf=passw
 
 ### impossible
 
-![image-20221125151452340](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440251.png)
+![image-20221125151452340](../img/202301071440251.png)
 
 我都知道当前密码了，为什么还用这个漏洞，因此这是impossible
 
@@ -372,13 +372,13 @@ http://127.0.0.1/vulnerabilities/csrf/?password_new=password&password_conf=passw
 
 ### low
 
-![image-20221125153715829](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440191.png)
+![image-20221125153715829](../img/202301071440191.png)
 
 并没有做其他的过滤，因此输入的只要是个文件路径都可以被查看，借此可以看到其他敏感文件
 
 比如输入`http://127.0.0.1/vulnerabilities/fi/?page=../../../../../../../../../../../../etc/passwd` 
 
-![image-20221125154112533](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440791.png)
+![image-20221125154112533](../img/202301071440791.png)
 
 
 
@@ -386,11 +386,11 @@ http://127.0.0.1/vulnerabilities/csrf/?password_new=password&password_conf=passw
 
 分析源码
 
-![image-20221125155424285](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440030.png)
+![image-20221125155424285](../img/202301071440030.png)
 
 只是一个简单的过滤，`http://127.0.0.1/vulnerabilities/fi/?page=....//....//....//....//....//....//....//etc/passwd` 
 
-![image-20221125155608148](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440215.png)
+![image-20221125155608148](../img/202301071440215.png)
 
 可以看到，这样也是可以访问的
 
@@ -402,7 +402,7 @@ http://127.0.0.1/vulnerabilities/csrf/?password_new=password&password_conf=passw
 
 限制上传的文件名只能以file开头
 
-![image-20221125163239419](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440585.png)
+![image-20221125163239419](../img/202301071440585.png)
 
 php有一个函数也是以file开头的，可以借此查看其他的文件
 
@@ -412,7 +412,7 @@ php有一个函数也是以file开头的，可以借此查看其他的文件
 
 限制了只能输入四个允许文件名
 
-![image-20221125163410559](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440084.png)
+![image-20221125163410559](../img/202301071440084.png)
 
 ### 总结与防御
 
@@ -439,15 +439,15 @@ allow_url_fopen = on（是否允许打开远程文件）
 
 唯一的限制条件就是文件大小，还是在前端，用F12改一下就可以了
 
-![image-20221125163642858](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440885.png)
+![image-20221125163642858](../img/202301071440885.png)
 
 ###  medium
 
-![image-20221125163756171](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440459.png)
+![image-20221125163756171](../img/202301071440459.png)
 
 通过数据报获取信息，因此可以通过重放数据报来达到上传其他类型文件的目的
 
-![image-20221125164226948](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440939.png)
+![image-20221125164226948](../img/202301071440939.png)
 
 可以看到可以通过校验的字段是`image/png` 或`image/jpeg`
 
@@ -455,15 +455,15 @@ allow_url_fopen = on（是否允许打开远程文件）
 
 使用bs拦截并修改报文
 
-![image-20221125165528090](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440768.png)
+![image-20221125165528090](../img/202301071440768.png)
 
 成功上传
 
-![image-20221125165605200](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440736.png)
+![image-20221125165605200](../img/202301071440736.png)
 
 尝试访问
 
-![image-20221125165645333](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440235.png)
+![image-20221125165645333](../img/202301071440235.png)
 
 未报错，攻击成功
 
@@ -495,7 +495,7 @@ if( ( strtolower( $uploaded_ext ) == "jpg" || strtolower( $uploaded_ext ) == "jp
 
 2. 生成md5作为新的文件名，并且成功上传的时候不会显示路径，只有名字
 
-   ![image-20221125171639174](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440263.png)
+   ![image-20221125171639174](../img/202301071440263.png)
 
    ```php
        $target_file   =  md5( uniqid() . $uploaded_name ) . '.' . $uploaded_ext;
@@ -539,7 +539,7 @@ $_DVWA[ 'recaptcha_private_key' ] = '6LdK7xITAzzAAL_uw9YXVUOPoIHPZLfw2K1n5NVQ';
 docker cp D:\config.inc.php d45:/var/www/html/config/config.inc.php
 ```
 
-![image-20221130163323944](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440242.png)
+![image-20221130163323944](../img/202301071440242.png)
 
 ### low
 
@@ -553,9 +553,9 @@ step=1&password_new=1&password_conf=1&Change=Change
 
 而这两个参数都是可以通过抓包重放修改的，这里就将1改为2
 
-![image-20221130173549203](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440350.png)
+![image-20221130173549203](../img/202301071440350.png)
 
-![image-20221130174253006](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071440542.png)
+![image-20221130174253006](../img/202301071440542.png)
 
 攻击成功
 
@@ -628,7 +628,7 @@ step=1&password_new=1&password_conf=1&g-recaptcha-response=hidd3n_valu3&user_tok
 
 ### impossible
 
-![image-20221130200707448](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441929.png)
+![image-20221130200707448](../img/202301071441929.png)
 
 同样的，我都知道当前密码了，还破解什么
 
@@ -648,7 +648,7 @@ step=1&password_new=1&password_conf=1&g-recaptcha-response=hidd3n_valu3&user_tok
 
    输入'1'，可以看到错误信息
 
-   ![image-20221130234655912](D:\OneDrive - mail.ynu.edu.cn\note\typoranote\DVWA.assets\image-20221130234655912.png)
+   ![image-20221130234655912](../DVWA.assets\image-20221130234655912.png)
 
    因此可以使用报错注入
 
@@ -665,7 +665,7 @@ step=1&password_new=1&password_conf=1&g-recaptcha-response=hidd3n_valu3&user_tok
 
    报错信息形如
 
-   ![image-20221130235918932](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441386.png)
+   ![image-20221130235918932](../img/202301071441386.png)
 
 3. 获取当前以及其他所有数据库
 
@@ -728,7 +728,7 @@ step=1&password_new=1&password_conf=1&g-recaptcha-response=hidd3n_valu3&user_tok
    
    ```
 
-   ![image-20221201122627366](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441566.png)
+   ![image-20221201122627366](../img/202301071441566.png)
 
    至此，攻击成功
 
@@ -736,7 +736,7 @@ step=1&password_new=1&password_conf=1&g-recaptcha-response=hidd3n_valu3&user_tok
 
 中级难度改成了下拉选择框，这属于前端校验，还需要看看后端校验
 
-![image-20221201142622701](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441365.png)
+![image-20221201142622701](../img/202301071441365.png)
 
 **源码分析**
 
@@ -766,7 +766,7 @@ id=2 and updatexml(1,concat((select password from dvwa.users limit 0,1)),1)&Subm
 
 **攻击成功**
 
-![image-20221201150937667](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441635.png)
+![image-20221201150937667](../img/202301071441635.png)
 
 ### high
 
@@ -777,7 +777,7 @@ id=2 and updatexml(1,concat((select password from dvwa.users limit 0,1)),1)&Subm
    1. 依旧对输入的id不做任何校验
    2. 关闭了报错提示，因此无法使用报错注入，但是可以使用**联合查询注入** 
 
-![image-20221201151452351](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441968.png)
+![image-20221201151452351](../img/202301071441968.png)
 
 
 
@@ -787,7 +787,7 @@ id=2 and updatexml(1,concat((select password from dvwa.users limit 0,1)),1)&Subm
 >
 > `1' union select group_concat(user),group_concat(password) from users #`
 
-![image-20221201153754044](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441213.png)
+![image-20221201153754044](../img/202301071441213.png)
 
 ### impossible
 
@@ -858,22 +858,22 @@ sqlmap -u "http://127.0.0.1/vulnerabilities/sqli/?id=1&Submit=Submit"
 sqlmap -u "http://127.0.0.1/vulnerabilities/sqli_blind/?id=1&Submit=Submit#" --cookie="security=low; PHPSESSID=95olg0v4v82ig83g1uv5kkscq2" --batch
 ```
 
-![image-20221201194403472](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441326.png)
+![image-20221201194403472](../img/202301071441326.png)
 
 ```sql
 sqlmap -u "http://127.0.0.1/vulnerabilities/sqli_blind/?id=1&Submit=Submit#" --cookie="security=low; PHPSESSID=95olg0v4v82ig83g1uv5kkscq2" --batch --dbs
 --current-db
 ```
 
-![image-20221201194526112](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441210.png)
+![image-20221201194526112](../img/202301071441210.png)
 
- ![image-20221201194615149](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441206.png)
+ ![image-20221201194615149](../img/202301071441206.png)
 
 ```sql
 --batch -D dvwa -T users -C "user,password" -dump
 ```
 
-![image-20221201195144111](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441611.png)
+![image-20221201195144111](../img/202301071441611.png)
 
 ### medium
 
@@ -887,7 +887,7 @@ sqlmap -u "http://127.0.0.1/vulnerabilities/sqli_blind/?id=1&Submit=Submit#" --c
 1' and sleep(3) # 字符
 ```
 
-![image-20221201221048686](D:\OneDrive - mail.ynu.edu.cn\note\typoranote\DVWA.assets\image-20221201221048686.png)
+![image-20221201221048686](../DVWA.assets\image-20221201221048686.png)
 
 **获取数据库名**
 
@@ -901,7 +901,7 @@ sqlmap -u "http://127.0.0.1/vulnerabilities/sqli_blind/?id=1&Submit=Submit#" --c
 
    返回exits或发生延时，说明长度为4
 
-   ![image-20221201225400230](D:\OneDrive - mail.ynu.edu.cn\note\typoranote\DVWA.assets\image-20221201225400230.png)
+   ![image-20221201225400230](../DVWA.assets\image-20221201225400230.png)
 
 2. 再逐个尝试具体的字符（有单引号的地方都需要被替换，这里使用ASCII码）
 
@@ -931,7 +931,7 @@ id=1 and (select count(table_name) from information_schema.tables where table_sc
 id=1 and length(substr((select table_name from information_schema.tables where table_schema=0x64767761 limit 0,1),1))=9# &Submit=Submit
 ```
 
-![image-20221201224557158](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441757.png)
+![image-20221201224557158](../img/202301071441757.png)
 
 **猜表名**
 
@@ -989,7 +989,7 @@ id=1 and ascii(substr((select table_name from information_schema.tables where ta
 <script>alert(document.cookie)</script>
 ```
 
-![image-20221202091530650](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441076.png)
+![image-20221202091530650](../img/202301071441076.png)
 
 ### medium
 
@@ -1027,7 +1027,7 @@ id=1 and ascii(substr((select table_name from information_schema.tables where ta
 <img src = 1 onerror = alert(document.cookie)>
 ```
 
-![image-20221202094134765](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071441561.png)
+![image-20221202094134765](../img/202301071441561.png)
 
 ### impossible
 
@@ -1099,7 +1099,7 @@ if(isset($_POST['btnSign'])){
 <script>alert('document.cookie')</script>
 ```
 
-![image-20221202095848650](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071442812.png)
+![image-20221202095848650](../img/202301071442812.png)
 
 因为使用了`trim(string,charlist)`，所以并没有cookie弹出，将字符串**编码**即可
 
@@ -1108,7 +1108,7 @@ if(isset($_POST['btnSign'])){
 <img src=5 onerror=alert(0x646F63756D656E742E636F6F6B6965)>
 ```
 
-![image-20221202121119499](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071442558.png)
+![image-20221202121119499](../img/202301071442558.png)
 
 **在另一台攻击机上获取靶机的cookie** 
 
@@ -1150,7 +1150,7 @@ if(isset($_POST['btnSign'])){
    cat /var/www/html/cookie.txt
    ```
 
-   ![image-20221202121946800](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071442886.png)
+   ![image-20221202121946800](../img/202301071442886.png)
 
    
 
@@ -1172,7 +1172,7 @@ if(isset($_POST['btnSign'])){
 
 **修改前端限制的长度** 
 
-![image-20221202122338484](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071442458.png)
+![image-20221202122338484](../img/202301071442458.png)
 
 **构造注入语句**
 
@@ -1185,7 +1185,7 @@ if(isset($_POST['btnSign'])){
 
 攻击成功
 
-![image-20221202124211794](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071442650.png)
+![image-20221202124211794](../img/202301071442650.png)
 
 ### high
 
@@ -1199,7 +1199,7 @@ if(isset($_POST['btnSign'])){
 <img src=5 onerror=alert(0x646F63756D656E742E636F6F6B6965)>
 ```
 
-![image-20221202125533481](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301071442046.png) 
+![image-20221202125533481](../img/202301071442046.png) 
 
 ### impossible
 

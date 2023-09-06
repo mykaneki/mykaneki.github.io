@@ -5,4 +5,4 @@ date: 2023-01-07
 
 `“该扩展程序未列在 Chrome 网上应用店中，并可能是在您不知情的情况下添加的”`
 
-![image-20220515130223446](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202205151302570.png)
+![image-20220515130223446](../docs/img/202205151302570.png)

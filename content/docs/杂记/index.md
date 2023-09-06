@@ -54,7 +54,7 @@ int main(int argc, char* argv[]){
 
 ## 在多条件模糊查询的时候，如何确定SQL语句（实战技巧）
 
-![image-20220410201941262](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202204102019434.png)
+![image-20220410201941262](../img/202204102019434.png)
 
 如图，在这`"businessAddress like '%"+businessAddress+"%'"`句之前是否需要加and？
 
@@ -76,7 +76,7 @@ String的字符串对象是字符串常量池里的，如果需要频繁的连�
 
 此时，选用StringBuffer效率更高
 
-![image-20220410202733398](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202204102030320.png)
+![image-20220410202733398](../img/202204102030320.png)
 
 ## SQL查询
 

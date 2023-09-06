@@ -60,13 +60,17 @@ int main() {
 2. 递归排序左边和右边
 3. 归并——合二为一
 
-## 二分 - 数的范围
+## 二分查找
 
-1. 找中间值 mid=(l+r)/2
-2. check(mid)
-3. 更新区间
+基础版
 
+以j为边界
 
+平衡版
+
+多个相同数字，返回最左、最右、所有区间范围
+
+确定插入位置
 
 ## 大数计算
 
@@ -127,3 +131,16 @@ public static String solve (String s, String t) {
 
 ![image-20230315200208496](https://raw.githubusercontent.com/mykaneki/picgo/master/img/202303241358940.png?token=ASIJOH2MRTGZZTR3CETDY3DEDU6FS)
 
+
+
+## Java 函数
+
+### Arrays
+
+`Arrays.binarySearch(nums,target);` 
+
+
+
+### Math
+
+`Math.abs(ans);` 

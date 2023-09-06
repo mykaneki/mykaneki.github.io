@@ -65,7 +65,7 @@ CDN 技术对于安全渗透的影响，具体如下：
   >
   > 查看邮件的源码，找到发件方的IP
   >
-  > ![image-20230124232435180](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301242324319.png)
+  > ![image-20230124232435180](../img/202301242324319.png)
   >
   > （需要注意，找到的是QQ邮箱IP还是目标网站的IP）
   >
@@ -79,7 +79,7 @@ CDN 技术对于安全渗透的影响，具体如下：
 
 ## 架构、搭建、WAF等
 
-![图片](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301251438163.png)
+![图片](../img/202301251438163.png)
 
 **站点搭建分析**
 
@@ -119,7 +119,7 @@ CDN 技术对于安全渗透的影响，具体如下：
   >
   > phpmyadmin
 
-![image-20230125144222494](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1431/202301251442567.png) 
+![image-20230125144222494](../img/202301251442567.png) 
 
 ## APP及其他资产
 

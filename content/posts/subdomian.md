@@ -227,7 +227,7 @@ dnswalk your_domain.
 
 #### nmap
 
-namap 中也有域传送漏洞的检测脚本：
+nmap 中也有域传送漏洞的检测脚本：
 
 ```
 nmap --script dns-zone-transfer --script-args dns-zone-transfer.domain=Your_domain -p 53 -Pn dns.xxx.yyy.com
